@@ -10,19 +10,19 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
         <div id="app">
-            <header class="container">
+            <header class="container-fluid py-2">
                 <div class="main-logo">
-                    <img src="./img/spotify.png" alt="spotify_image">
+                    <img class="ms-5" src="./img/spotify.png" alt="spotify_image">
                 </div>
             </header>
-            <div class="container">
+            <main class="container">
                 <div class="row">
                     <div class="col-12">
-                        <article class="disc" v-for="(disc, index) in discs" :key="index">
+                        <article class="disc text-center" v-for="(disc, index) in discs" :key="index">
                             <img :src="disc.poster" alt="'disc.title'">
                             <div class="disc-description">
                                 <p>
@@ -43,7 +43,7 @@
                         </article>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
 
         <script src="./script/main.js"></script>
