@@ -14,11 +14,32 @@
     </head>
     <body>
         <div id="app">
+            <header class="container">
+                <div class="main-logo">
+                    <img src="./img/spotify.png" alt="spotify_image">
+                </div>
+            </header>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <article class="disc" v-for="(disc, index) disc in discs" :key="index">
-
+                        <article class="disc" v-for="(disc, index) in discs" :key="index">
+                            <img :src="disc.poster" alt="'disc.title'">
+                            <div class="disc-description">
+                                <p>
+                                    <strong>
+                                    {{disc.title}}
+                                    </strong>
+                                </p>
+                                <p>
+                                    {{disc.author}}
+                                </p>
+                                <p>
+                                    <strong>
+                                    {{disc.year}}
+                                    </strong>
+                                </p>
+                            </div>
+                            
                         </article>
                     </div>
                 </div>
